@@ -44,11 +44,11 @@ output "hostname" {
 }
 
 output "username" {
-  value = join(aws_db_instance.default.*.username)
+  value = aws_db_instance.default.*.username[0]
 }
 
 output "port" {
-  value = join("", aws_db_instance.default.*.port)
+  value = aws_db_instance.default.*.port[0]
 }
 
 output "db_instance_identifier" {
