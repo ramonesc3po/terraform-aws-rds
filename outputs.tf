@@ -42,3 +42,15 @@ output "hostname" {
   value       = module.dns_host_name.hostname
   description = "DNS host name of the instance"
 }
+
+output "username" {
+  value = aws_db_instance.default.username
+}
+
+output "port" {
+  value = aws_db_instance.default.port
+}
+
+output "db_instance_identifier" {
+  value = aws_db_instance.default.identifier
+}
