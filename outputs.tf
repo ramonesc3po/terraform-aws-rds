@@ -52,5 +52,5 @@ output "port" {
 }
 
 output "db_instance_identifier" {
-  value = aws_db_instance.default.identifier
+  value = join("", aws_db_instance.default.*.identifier)
 }
